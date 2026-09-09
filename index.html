@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Siddhant Magdum — Java Backend Developer</title>
+<meta name="description" content="Portfolio of Siddhant Magdum, Java Backend Developer specializing in Android Development along with Spring Boot, Microservices, Kafka, AWS." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="loader-inner">
+    <div class="loader-logo">&lt;SM /&gt;</div>
+    <div class="loader-bar"><span id="loadFill"></span></div>
+    <div class="loader-pct" id="loadPct">0%</div>
+    <div class="loader-tip">compiling portfolio.java ...</div>
+  </div>
+</div>
+
+<!-- FIXED 3D + FX LAYERS -->
+<canvas id="webgl"></canvas>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+<div class="grid-overlay"></div>
+<div class="noise"></div>
+<div id="scrollProgress"></div>
+<div class="cursor-dot" id="cDot"></div>
+<div class="cursor-ring" id="cRing"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#home" class="brand magnetic">&lt;/&gt; <span>siddhant.dev</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#achievements">Wins</a>
+    <a href="#education">Education</a>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+  </div>
+  <div class="nav-right">
+    <a href="https://github.com/" target="_blank" class="icon-btn" aria-label="GitHub">GH</a>
+    <button id="menuBtn" aria-label="menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="home" class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="badge reveal"><span class="pulse"></span> Available for new opportunities</div>
+      <p class="hero-kicker reveal">Hello World, I am</p>
+      <h1 class="hero-title reveal">
+        <span class="grad">SIDDHANT</span><br/>
+        <span class="outline">MAGDUM</span>
+      </h1>
+      <h2 class="typed-wrap reveal">Java Backend Developer — <span id="typed"></span><span class="caret">|</span></h2>
+      <p class="hero-desc reveal">I build <b>scalable microservices</b> with Java 17, Spring Boot, Kafka & AWS. I also have profession experience in Android Development. 500+ DSA problems crushed.</p>
+      <div class="hero-btns reveal">
+        <a href="#projects" class="btn btn-primary magnetic">View My Work ⚡</a>
+        <a href="#contact" class="btn btn-ghost magnetic">Contact Me</a>
+        <a class="btn btn-ghost magnetic" onclick="downloadResume()">↓ Resume</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div><b data-count="3">0</b><span>Years Exp</span></div>
+        <div><b data-count="25">0</b><span>Projects</span></div>
+        <div><b data-count="500">0</b><span>DSA Solved</span></div>
+        <div><b data-count="12">0</b><span>Microservices Live</span></div>
+      </div>
+    </div>
+
+    <div class="hero-right reveal">
+      <div class="tilt-card" id="heroTilt">
+        <div class="code-head"><i></i><i></i><i></i><span>Portfolio.java — zsh</span></div>
+<pre class="code-body"><code><span class="k">public class</span> <span class="c">Developer</span> {
+  String name = <span class="s">"Siddhant Magdum"</span>;
+  String[] stack = {<span class="s">"Java 17"</span>, <span class="s">"Spring Boot"</span>,
+    <span class="s">"Kafka"</span>, <span class="s">"AWS"</span>, <span class="s">"Docker"</span>};
+  <span class="k">boolean</span> openToWork = <span class="n">true</span>;
+
+  <span class="k">public void</span> <span class="f">build</span>() {
+    coffee.drink();
+    systems.scale(<span class="n">1_000_000</span>); <span class="cm">// req/day</span>
+  }
+}</code></pre>
+        <div class="code-foot">
+          <span>● localhost:8080 — <b class="ok">200 OK</b> • 42ms</span>
+          <button class="run-btn magnetic" onclick="runFake(event)">▶ Run</button>
+        </div>
+      </div>
+      <div class="float-chip fc1">☕ Java 17</div>
+      <div class="float-chip fc2">🍃 Spring Boot 3</div>
+      <div class="float-chip fc3">🐳 Docker + K8s</div>
+      <div class="float-chip fc4">⚡ Kafka</div>
+    </div>
+  </div>
+  <div class="scroll-hint"><div class="mouse"><div class="wheel"></div></div><span>scroll to explore 3D</span></div>
+  <div class="hero-terminal reveal" id="term">$ whoami → backend_engineer --java --spring --coffee=∞</div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee"><div class="marquee-track" id="marqueeTrack">
+<span>JAVA 17 ✦ SPRING BOOT ✦ MICROSERVICES ✦ KAFKA ✦ DOCKER ✦ KUBERNETES ✦ AWS ✦ POSTGRESQL ✦ REDIS ✦ JUNIT ✦ HIBERNATE ✦ MAVEN ✦&nbsp;</span>
+<span>JAVA 17 ✦ SPRING BOOT ✦ MICROSERVICES ✦ KAFKA ✦ DOCKER ✦ KUBERNETES ✦ AWS ✦ POSTGRESQL ✦ REDIS ✦ JUNIT ✦ HIBERNATE ✦ MAVEN ✦&nbsp;</span>
+</div></div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <p class="sec-tag reveal">// 01. about-me</p>
+  <h2 class="sec-title reveal">Code, Coffee <span class="grad"> & Clean Architecture</span></h2>
+  <div class="about-grid">
+    <div class="about-photo tilt reveal" id="aboutTilt">
+      <div class="avatar">SM</div>
+      <div class="avatar-ring"></div>
+      <div class="exp-badge"><b>3+</b><span>yrs<br/>Java</span></div>
+      <div class="status-card"><span class="pulse"></span> Open to work — Backend / SDE-2</div>
+    </div>
+    <div class="about-text reveal">
+      <p>I'm <b>Siddhant Magdum</b>, a Java backend developer from Pune. I design REST APIs, event-driven microservices and CI/CD pipelines that survive real traffic. My happy place: IntelliJ, a terminal, and a failing test turning green.</p>
+      <div class="info-grid">
+        <div><span>Name</span><b>Siddhant Magdum</b></div>
+        <div><span>Email</span><b>siddhant.dev@gmail.com</b></div>
+        <div><span>Location</span><b>Pune, India • Remote OK</b></div>
+        <div><span>Phone</span><b>+91 98765 43210</b></div>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/" target="_blank" class="magnetic">GitHub ↗</a>
+        <a href="https://linkedin.com/" target="_blank" class="magnetic">LinkedIn ↗</a>
+        <a href="https://leetcode.com/" target="_blank" class="magnetic">LeetCode ↗</a>
+        <a href="#" class="magnetic">Resume ↓</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <p class="sec-tag reveal">// 02. arsenal</p>
+  <h2 class="sec-title reveal">My <span class="grad">Tech Stack</span></h2>
+  <div class="skills-grid">
+    <div class="skill-card reveal"><div class="sk-top"><span>☕</span><b>Java 17</b><i>95%</i></div><div class="bar"><span style="--w:95%"></span></div><small>Streams • Records • Virtual Threads • Concurrency</small></div>
+    <div class="skill-card reveal"><div class="sk-top"><span>🍃</span><b>Spring Boot 3</b><i>93%</i></div><div class="bar"><span style="--w:93%"></span></div><small>Security • JPA • WebFlux • Actuator • AOP</small></div>
+    <div class="skill-card reveal"><div class="sk-top"><span>🧩</span><b>Microservices</b><i>90%</i></div><div class="bar"><span style="--w:90%"></span></div><small>Gateway • Eureka • Resilience4j • Feign • Config</small></div>
+    <div class="skill-card reveal"><div class="sk-top"><span>🗄️</span><b>SQL / NoSQL</b><i>88%</i></div><div class="bar"><span style="--w:88%"></span></div><small>PostgreSQL • MySQL • MongoDB • Redis • Flyway</small></div>
+    <div class="skill-card reveal"><div class="sk-top"><span>⚡</span><b>Kafka / Messaging</b><i>85%</i></div><div class="bar"><span style="--w:85%"></span></div><small>Producers • Consumers • DLQ • Exactly-once</small></div>
+    <div class="skill-card reveal"><div class="sk-top"><span>☁️</span><b>AWS + DevOps</b><i>82%</i></div><div class="bar"><span style="--w:82%"></span></div><small>EC2 • S3 • RDS • Docker • K8s • Jenkins • GH Actions</small></div>
+  </div>
+  <div class="tools-cloud reveal"><span>JUnit5</span><span>Mockito</span><span>Hibernate</span><span>Maven</span><span>Gradle</span><span>Postman</span><span>Swagger</span><span>SonarQube</span><span>Git</span><span>Linux</span><span>Grafana</span><span>Elasticsearch</span></div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <p class="sec-tag reveal">// 03. selected-work</p>
+  <h2 class="sec-title reveal">Projects That <span class="grad">Ship & Scale</span></h2>
+  <div class="filters reveal">
+    <button class="fbtn active" data-f="all">All</button>
+    <button class="fbtn" data-f="micro">Microservices</button>
+    <button class="fbtn" data-f="api">REST API</button>
+    <button class="fbtn" data-f="realtime">Realtime</button>
+  </div>
+  <div class="proj-grid" id="projGrid">
+    <article class="proj tilt reveal" data-tags="micro api"><div class="proj-glow"></div><div class="proj-top"><span>🛒</span><div><a href="https://github.com/" target="_blank">↗</a></div></div><h3>ShopKart Microservices</h3><p>7 services: auth, catalog, cart, orders, payments, notify. Spring Cloud Gateway + Kafka + Redis. 10k req/min load-tested.</p><div class="tags"><span>Java 17</span><span>Spring Boot</span><span>Kafka</span><span>Docker</span></div></article>
+    <article class="proj tilt reveal" data-tags="realtime api"><div class="proj-glow"></div><div class="proj-top"><span>💬</span><div><a href="https://github.com/" target="_blank">↗</a></div></div><h3>PingUp Chat Engine</h3><p>WebSocket + STOMP chat with JWT, typing indicators, online presence, Redis pub/sub. 5k concurrent users.</p><div class="tags"><span>WebSocket</span><span>Redis</span><span>JWT</span></div></article>
+    <article class="proj tilt reveal" data-tags="api micro"><div class="proj-glow"></div><div class="proj-top"><span>🏦</span><div><a href="https://github.com/" target="_blank">↗</a></div></div><h3>SecureBank API</h3><p>Banking REST API with Spring Security, OAuth2, audit logs, idempotent transfers. 98% test coverage.</p><div class="tags"><span>Security</span><span>PostgreSQL</span><span>JUnit</span></div></article>
+    <article class="proj tilt reveal" data-tags="api"><div class="proj-glow"></div><div class="proj-top"><span>✅</span><div><a href="https://github.com/" target="_blank">↗</a></div></div><h3>TaskForge + JWT</h3><p>Task manager with roles, refresh-token rotation, Swagger docs, Flyway migrations, Dockerized.</p><div class="tags"><span>Spring</span><span>MySQL</span><span>Swagger</span></div></article>
+    <article class="proj tilt reveal" data-tags="micro realtime"><div class="proj-glow"></div><div class="proj-top"><span>🍔</span><div><a href="https://github.com/" target="_blank">↗</a></div></div><h3>QuickBite Delivery</h3><p>Food delivery backend: order tracking via SSE, Stripe payments, Redis caching cut latency 60%.</p><div class="tags"><span>SSE</span><span>Stripe</span><span>MongoDB</span></div></article>
+    <article class="proj tilt reveal" data-tags="api realtime"><div class="proj-glow"></div><div class="proj-top"><span>🧠</span><div><a href="https://github.com/" target="_blank">↗</a></div></div><h3>Judge0 Clone — Code Runner</h3><p>Remote Java code execution with Docker sandbox, queue workers, rate limiting. Used by 2k students.</p><div class="tags"><span>Docker</span><span>Queue</span><span>AWS EC2</span></div></article>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <p class="sec-tag reveal">// 04. journey</p>
+  <h2 class="sec-title reveal">Work <span class="grad">Experience</span></h2>
+  <div class="timeline">
+    <div class="t-item reveal"><div class="t-dot"></div><div class="t-card"><span class="t-date">2024 — Present</span><h3>Backend Developer (SDE-2) — TechNova Solutions, Pune</h3><ul><li>Split monolith into 6 Spring Boot microservices; p95 latency 900ms → 220ms.</li><li>Built Kafka order pipeline handling 1M+ events/day with DLQ + retries.</li><li>Cut AWS bill 28% via Redis caching + RDS tuning.</li></ul><div class="tags"><span>Spring Boot</span><span>Kafka</span><span>AWS</span></div></div></div>
+    <div class="t-item reveal"><div class="t-dot"></div><div class="t-card"><span class="t-date">2022 — 2024</span><h3>Java Developer — CodeCraft Labs, Remote</h3><ul><li>Shipped 15+ REST APIs with Spring Security + JWT, 99.9% uptime.</li><li>Added CI/CD (Jenkins + Docker) — deploy time 45min → 8min.</li><li>Mentored 3 interns on DSA + clean code.</li></ul><div class="tags"><span>Java</span><span>MySQL</span><span>Docker</span></div></div></div>
+    <div class="t-item reveal"><div class="t-dot"></div><div class="t-card"><span class="t-date">2021 — 2022</span><h3>Backend Intern — StartKart</h3><ul><li>Built CRUD + pagination + search APIs used by 10k users.</li><li>Wrote 120+ JUnit tests, coverage 45% → 85%.</li></ul><div class="tags"><span>Spring</span><span>JUnit</span></div></div></div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="section">
+  <p class="sec-tag reveal">// 05. trophies</p>
+  <h2 class="sec-title reveal">Achievements <span class="grad">& Certifications</span></h2>
+  <div class="ach-grid">
+    <div class="ach reveal">🏆<h3>Smart India Hackathon Finalist</h3><p>Top 5 / 300 teams. Built disaster-relief tracker in 36 hrs.</p></div>
+    <div class="ach reveal">🎖️<h3>Oracle Certified Java SE 17</h3><p>Score 92%. Credential ID: OC-2024-XXXX.</p></div>
+    <div class="ach reveal">⚔️<h3>500+ DSA on LeetCode</h3><p>Max rating 1850. 120-day streak. Top 8% Java solvers.</p></div>
+    <div class="ach reveal">☁️<h3>AWS Cloud Practitioner</h3><p>EC2, S3, RDS, IAM, CloudWatch hands-on certified.</p></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+  <p class="sec-tag reveal">// 06. education</p>
+  <h2 class="sec-title reveal">Edu<span class="grad">cation</span></h2>
+  <div class="edu-grid">
+    <div class="edu reveal"><span>🎓 2018 — 2022</span><h3>B.Tech, Computer Science</h3><p>Savitribai Phule Pune University — CGPA 8.7/10. DSA head, coding club lead.</p></div>
+    <div class="edu reveal"><span>📜 2023</span><h3>Full-Stack Java + DSA</h3><p>600 hrs: Spring, Microservices, System Design, 400+ problems.</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <p class="sec-tag reveal">// 07. say-hello</p>
+  <h2 class="sec-title reveal">Let's Build Something <span class="grad">Crazy Together</span></h2>
+  <div class="contact-grid">
+    <div class="c-info reveal">
+      <a href="mailto:siddhant.dev@gmail.com">📧 siddhant.dev@gmail.com</a>
+      <a href="tel:+919876543210">📱 +91 98765 43210</a>
+      <p>📍 Pune, India • Open to Remote / Hybrid</p>
+      <div class="socials"><a href="https://github.com/" target="_blank">GitHub</a><a href="https://linkedin.com/" target="_blank">LinkedIn</a><a href="https://leetcode.com/" target="_blank">LeetCode</a></div>
+    </div>
+    <form class="c-form reveal" id="contactForm">
+      <input required placeholder="Your name" id="cfName"/>
+      <input required type="email" placeholder="Your email" id="cfEmail"/>
+      <textarea required rows="5" placeholder="Tell me about your project / role..." id="cfMsg"></textarea>
+      <button class="btn btn-primary" type="submit">Send Message 🚀</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Siddhant Magdum • Built with ☕ + HTML/CSS/JS + Three.js • <a href="#home">Back to top ↑</a></p>
+  <p class="dummy-note">* Dummy demo data — replace with your real info before sharing.</p>
+</footer>
+
+<div id="toast"></div>
+<button id="toTop" aria-label="top">↑</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
