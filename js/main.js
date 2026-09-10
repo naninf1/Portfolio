@@ -114,7 +114,7 @@ try {
 } catch(e) { console.warn('WebGL off', e); }
 
 // ===== TYPING =====
-const words = ['Spring Boot APIs.', 'Microservices.', 'Kafka Pipelines.', 'AWS Deployments.', 'Clean Code.'];
+const words = ['Spring Boot APIs.', 'Microservices.', 'Kafka Pipelines.', 'AWS Deployments.', 'Android Development'];
 let wi = 0, ci = 0, del = false;
 const typedEl = document.getElementById('typed');
 (function type(){
