@@ -1,8 +1,5 @@
 # Siddhant Magdum — Portfolio
 
-Static HTML/CSS/JS portfolio with Three.js 3D background, GSAP scroll animations,
-custom cursor, 3D tilt cards, typing effect, filters, timeline.
-
 
 ## Customize (replace dummy data)
 - `index.html` → name, email, links, projects, experience, education
